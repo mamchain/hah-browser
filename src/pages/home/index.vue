@@ -9,9 +9,17 @@
 </template>
 
 <script>
+import { Toast } from 'vant';
+
 export default {
+    components: { Toast },
     methods: {
         toChildOne() {
+            Toast.loading({
+                message: '加载中...',
+                forbidClick: true,
+            });
+            return
             this.$router.push({
                 path: '/home/childOne'
             })
