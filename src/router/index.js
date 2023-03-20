@@ -11,6 +11,9 @@ Vue.use(Router)
 export default new Router({
   mode: 'history',
   routes: [
-    ...homePage, ...erc20Page, ...dposPage, ...richPage
+    ...homePage,
+    ...erc20Page,
+    ...dposPage,
+    ...richPage
   ]
 })

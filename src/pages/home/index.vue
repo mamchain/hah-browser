@@ -29,4 +29,8 @@ export default {
 button {
     border: 1px solid red;
 }
+
+.container {
+    padding-top: 80px;
+}
 </style>
