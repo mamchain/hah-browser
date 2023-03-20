@@ -1,7 +1,11 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+    <div class="main-container">
+      <div class="top">this is top bar</div>
+      <router-view />
+      <div class="bottom">this is bottom bar</div>
+    </div>
+
   </div>
 </template>
 
@@ -12,12 +16,37 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.main-container {
+  min-height: 100vh;
+  min-width: 100vw;
+  border: 1px solid red;
+}
+
+.top,
+.bottom {
+
+  width: 100%;
+  height: 60px;
+  border: 1px solid blue;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  line-height: 60px;
+}
+
+.top {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.bottom {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  border: 1px solid green;
 }
 </style>
